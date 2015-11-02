@@ -2,7 +2,7 @@ Fix for Virgin Media Superhub 2 VS MacBook Pro (2015) wifi issue
 ======
 The following codes are designs and written by my. The main goal is to Quick-Fix the issue between the new Macbook Pro and the Virgin Media Superhub 2 wireless modem. 
 Use the code based on your own decission.
-Feel free to contribute.
+Feel free to contribute or leave a comment here or on Twitter.
 
 **How to use** 
 
