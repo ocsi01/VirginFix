@@ -27,9 +27,12 @@ cd VrginFix
 ## Notes
  * The installer needs sudo, the rest of the script does NOT.
  * The init.sh querries your system for your IP, MAC address.
- * The init.sh qurries the currently active wifi networks SSID -> This will be a new feature. Coming soon
+ * The init.sh qurries the currently active wifi networks SSID
+ * The run.sh perriodically checks if the current WiFi network SSID is matching with the one saved during init. This aviods sending ARP calls on other Wifi Networks.
  * The init.sh creates a binary file, which contains the ARP call to send out.
+ * The init.sh creates an Arp.conf file to persistently store setting. Rerun init.sh to update settings.
  * The run.sh contains an endless loop. The output is redirected to the arp.log, arp_error.log files
+ * The run.sh gives a simple status if the Wifi is matching to the configured one.
 
 ## Dependencies
 Ths installer script downloads and installs tcpreplay 4.1. For further details and dependencies check the project website:

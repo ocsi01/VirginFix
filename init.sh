@@ -1,7 +1,10 @@
 #! /bin/bash
 
 File_Path="ARP_call.pcap"
+Config_File_Path="Arp.conf"
 Router_IP="192.168.0.1"
+Flood_period_in_Seconds="1"
+SSID_Check_intervall="5"
 
 echo "Default IP for Router: $Router_IP"
 
@@ -13,6 +16,12 @@ echo "Your wifi adaptors IP Address: $IP_Address"
 
 MySSID="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}')"
 echo "your wifi SSID is: $MySSID"
+echo "# The SSID of your home network" > $Config_File_Path
+echo "UPS_SSID=$MySSID" >> $Config_File_Path
+echo "# Time delay in seconds between ARP calls" >> $Config_File_Path
+echo "Flood_period=$Flood_period_in_Seconds" >> $Config_File_Path
+echo "# Time delay in seconds between SSID Checks" >> $Config_File_Path
+echo "SSID_Check_intervall=$SSID_Check_intervall" >> $Config_File_Path
 
 echo "Generating ARP call as hexadecimal file."
 
