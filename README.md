@@ -1,8 +1,8 @@
 Fix for Virgin Media Superhub 2 VS MacBook Pro (2015) wifi issue
 ======
-The following codes are designs and written by my. The main goal is to Quick-Fix the issue between the new Macbook Pro and the Virgin Media Superhub 2 wireless modem. 
-Use the code based on your own decission.
-Feel free to contribute or leave a comment here or on Twitter.
+This code is for my personal use. The main goal is to Quick-Fix the issue between the new Macbook Pro and the Virgin Media Superhub 2 wireless modem. 
+Use the code based on your own decision.
+Feel free to contribute or leave a comment here.
 
 **How to use** 
 
@@ -27,7 +27,7 @@ cd VrginFix
 ## Notes
  * The installer needs sudo, the rest of the script does NOT.
  * The init.sh querries your system for your IP, MAC address.
- * The init.sh qurries the currently active wifi networks SSID
+ * The init.sh querries the currently active wifi networks SSID.
  * The run.sh perriodically checks if the current WiFi network SSID is matching with the one saved during init. This aviods sending ARP calls on other Wifi Networks.
  * The init.sh creates a binary file, which contains the ARP call to send out.
  * The init.sh creates an Arp.conf file to persistently store setting. Rerun init.sh to update settings.
